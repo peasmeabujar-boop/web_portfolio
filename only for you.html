@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff4081, 0 0 30px #ff80ab; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #ff4081, 0 0 50px #f50057; }
+    }
+
+    p {
+      color: #fff;
+      font-size: 1.3rem;
+      margin-top: 10px;
+      text-align: center;
+      max-width: 500px;
+      line-height: 1.5;
+    }
+
+    .balloons {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      animation: rise 10s linear infinite;
+    }
+
+    .balloon {
+      width: 60px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ff80ab, #f50057);
+      position: relative;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      width: 2px;
+      height: 40px;
+      background: #fff;
+      transform: translateX(-50%);
+    }
+
+    @keyframes rise {
+      0% { top: 100%; opacity: 1; }
+      100% { top: -150px; opacity: 0; }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      color: #fff;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 শুভ জন্মদিন! 🎂</h1>
+  <p>তোমার জীবন ভরে উঠুক আনন্দ, ভালোবাসা আর হাসিতে।  
+     প্রতিটা দিন হোক রঙিন, ঠিক তোমার হাসির মতো! 💖</p>
+
+  <div class="balloons">
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+    <div class="balloon"></div>
+  </div>
+
+  <footer><h1>ইতি তোমার বন্ধু পলাশ❤️</h1></footer>
+</body>
+</html>
