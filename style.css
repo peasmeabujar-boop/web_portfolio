@@ -2,52 +2,106 @@ body {
   background: #f2f2f2;
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  padding: 0;
 }
 
-h1 {
-  margin-top: 50px;
-  font-size: 50px;
-  color: #333;
+/* HEADINGS */
+h1 { font-size: 45px; color: #333; margin: 0; }
+h2 { font-size: 32px; margin: 10px 0; }
+h3 { font-size: 22px; margin-bottom: 15px; }
+p  { font-size: 16px; line-height: 1.6; }
+
+.name_highlight { color: hotpink; }
+.orange_highlight { color: orange; }
+
+/* BUTTON */
+.link-button {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  font-size: 20px;
+  background-color: hotpink;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.name_highlight {
-  color: hotpink;
-}
-img {
-  width: 50%;
-  height: 1000px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.link-button:hover {
+  transform: scale(1.05);
 }
 
-/* Hover effect */
-img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.5);
-}
-.half_width {
-    width: 40%;
-    float: left;
-    margin-left: 3%;
-    padding-left: 2%;
-}
-.half_width img {
-    width: 100%;
-}
-section {
-    overflow: hidden;
-    margin-bottom: 20px;
-}
+/* TOP BANNER LAYOUT */
 .top_banner {
-    border: orchid dotted 5px;
-  background-image: url("images/top-banner.png");
-  background-size: cover; /* পুরো জায়গা ভরে যাবে */
-  background-position: center; /* মাঝখানে ঠিক থাকবে */
-  background-repeat: no-repeat; /* রিপিট করবে না */
-  height: 100vh; /* পুরো স্ক্রিন জুড়ে */
-  width: 100%; /* পুরো চওড়া */
+  background-size: cover;
+  background-position: center;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 60px;
+  gap: 30px;
+  width: 100%;
 }
 
+.half_width {
+  width: 50%;
+}
 
+/* IMAGE */
+img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+img:hover {
+  transform: scale(1.05);
+}
+
+/* EXPERIENCE AREA */
+.experience_area {
+  background-position: left;
+  display: flex;
+  justify-content: center;
+  padding: 70px 20px;
+  width: 50%;
+}
+
+/* EXPERIENCE BOX */
+.single_experience {
+  background: white;
+  width: 60%;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 40px gray;
+}
+
+#full-stack {
+  border-left: 7px solid;
+  border-image: linear-gradient(180deg, lightsalmon, tomato);
+  border-image-slice: 1;
+}
+
+/* RESPONSIVE 
+@media (max-width: 768px) {
+  .top_banner {
+    flex-direction: column;
+    text-align: center;
+  } */
+
+  .half_width {
+    width: 100%;
+  }
+
+  .single_experience {
+    width: 90%;
+  }
+  .full_bg_wrap {
+    background-image: url("images/top-banner.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+  
